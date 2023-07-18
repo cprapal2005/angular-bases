@@ -19,7 +19,10 @@ export class ListComponent {
 
 
 
-  onDeleteCharacter(id: string): void {
+  onDeleteCharacter(id?: string): void {
+
+    if(!id) return;
+
     this.onDeletedId.emit(id);
   }
 
